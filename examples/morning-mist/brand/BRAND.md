@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | Strategy | decided | `/grill-brand` rounds 1 to 3 |
 | Personality | decided | `/grill-brand` round 3 |
+| Constraints | decided | `/grill-brand` round 4 |
 | Taste evidence | decided | `/grill-brand` round 4; 9 items below |
 | Direction | decided | `/design-routes`: route B, Field Notes |
 | Logo | decided | `/logo-lab`; kit in `assets/logo/` |
@@ -17,8 +18,13 @@
 | Layout | decided | `/brand-system` |
 | Voice | decided | `/grill-brand` round 3 |
 
+## Summary
+
+Morning Mist Roasters roasts single-origin coffee from small farms in northern Thailand so home brewers can taste where it came from. Audience: Pim, a freelance illustrator who reads the bag before the price. Personality: warm but precise, local but never touristy. Taste: labelled specimens, a serif with character, calm green on warm white; no mascots, no kraft paper. Route: Field Notes.
+
 ## Strategy
 
+- **Name**: ไร่หมอกเช้า · Morning Mist Roasters · final
 - **Purpose**: Roast single-origin coffee from small farms in northern Thailand so that people taste where their coffee comes from.
 - **Onlyness**: We are the only roaster in Chiang Mai that prints the farmer's name and the altitude on every bag, for home brewers who want to know where their coffee came from. (Swap-test: with a competitor's name in place the sentence is false, because no neighbour prints the farmer.)
 - **Audience**: Pim, 29, a freelance illustrator in Chiang Mai. She brews pour-over at home, orders beans on LINE OA and Instagram, and reads the bag before she reads the price. Segment: home brewers aged 25 to 40 who buy online.
@@ -27,10 +33,13 @@
 
 ## Personality
 
+- **Spectrum** (1 to 5 between each pair; 1 = the left word, 5 = the right word): playful ↔ serious 4 · classic ↔ modern 3 · warm ↔ cool 2 · loud ↔ quiet 3 · accessible ↔ premium 2 · handmade ↔ engineered 2
 - **Say / never**: warm but never rustic-kitsch; precise but never clinical; local but never touristy.
-- **Spectrum** (1 to 5): playful 2 · classic 3 · warm 4 · quiet 3 · accessible 4 · handmade 4
 - **Archetype**: primary Explorer, secondary Caregiver.
-- **Voice sample lines**: "ถั่วจากไร่คุณสมศรี สูง 1,350 เมตร คั่วอ่อน กลิ่นลิ้นจี่" · "Grown at 1,350 m. Roasted light. Read the bag."
+
+## Constraints
+
+Free OFL fonts only; Thai and English in the logo; one-color green version for rubber stamps; no brown-and-kraft look; avoid red-orange (too close to a loud chain).
 
 ## Taste evidence
 
@@ -50,13 +59,17 @@ Type DNA from the liked fonts: serif, moderate contrast, warm terminals, tight s
 
 ## Direction
 
-**Route B, Field Notes**: the bag reads like a labelled specimen from a real farm. Data (farmer, altitude, variety, process) is the hero, set in a warm Thai serif; a sun behind morning mist is the one picture.
-
-Rejected: **Route A, Kraft Craft** (paper, hand lettering, mascots: the category's default look, so it fails the onlyness test) and **Route C, Bright Counter** (saturated flat color and chunky sans: loud and playful, which contradicts "serious about farmers").
+- **Route and idea**: Route B, Field Notes. The bag reads like a labelled specimen from a real farm; data (farmer, altitude, variety, process) is the hero.
+- **Personality position**: serious 4, warm 2 (leaning warm), handmade 2 (leaning handmade).
+- **Type**: Pridi 600 for display and headings, IBM Plex Sans Thai Looped for body and UI.
+- **Color**: forest green #2f6b4f (primary), warm cream #f9f7f0 (page), ink #1d1a13 (text), coffee-cherry red #b3342a (accent, once per piece).
+- **Logo approach**: combination mark, a sun behind morning mist, with the wordmark set in Pridi.
+- **Graphic language**: specimen labels, mist bands taken from the icon, real farm light.
+- **Rejected routes and why**: **Route A, Kraft Craft** (paper, hand lettering, mascots: the category's default look, so it fails the onlyness test); **Route C, Bright Counter** (saturated flat color and chunky sans: loud and playful, which contradicts "serious about farmers").
 
 ## Logo
 
-Concept: a sun rising behind bands of mist. Type: combination mark (icon plus wordmark), because the icon must work as a LINE OA avatar and a favicon where the full name cannot fit. Files in `assets/logo/` (`logo-primary.svg`, `logo-alternate.svg`, `logo-icon.svg`, `logo-black.svg`, `logo-white.svg`), text set as outlines.
+Reason for a mark: the icon must work as a LINE OA avatar and a favicon, where the full name cannot fit. Concept: a sun rising behind bands of mist. Type: combination mark (icon plus wordmark), because the icon must work as a LINE OA avatar and a favicon where the full name cannot fit. Files in `assets/logo/` (`logo-primary.svg`, `logo-alternate.svg`, `logo-icon.svg`, `logo-black.svg`, `logo-white.svg`), text set as outlines.
 
 - **Clear space**: one band-gap-to-band module on every side, taken as the height of the capital "M" of the wordmark.
 - **Minimum size**: icon 16 px / 5 mm; primary lockup 120 px / 25 mm wide.
@@ -89,9 +102,11 @@ Proportions: about 60% cream, 30% green and ink, 10% cherry red (one use per pie
 
 ## Graphic language
 
-1. **Specimen label**: name in Pridi, then data rows in small caps-free Plex with hairline rules (farmer, altitude, variety, process).
+1. **Specimen label**: name in Pridi, then data rows in Plex with hairline rules (farmer, altitude, variety, process).
 2. **Mist bands**: horizontal bands taken from the icon, used as dividers and image masks, never as decoration over text.
 3. **Real farm photography**: soft morning light, cool shadows, the farmer in frame when possible, cropped tight.
+
+**Image recipe** (prefix for every generated image): documentary photograph, real skin and fabric texture, tight crop; low morning sun through mist, cool shadows; muted forest greens with warm cream highlights, red only on coffee cherries; no text, no logos, no watermark, no mascot, no bean icon, no kraft-paper look. A generated person is fictional and never stands in for a named farmer.
 
 ## Layout
 
@@ -99,7 +114,7 @@ Grid: 4 columns on phone, 12 on wide, 24 px margins on phone. Spacing from the s
 
 ## Voice
 
-Plain, specific, a little formal in Thai (ครับ/ค่ะ used sparingly), numbers over adjectives. Words used: ไร่, ระดับความสูง, คั่วอ่อน, farmer's name. Words avoided: "premium", "authentic", "artisan".
+Sample lines: "ถั่วจากไร่คุณสมศรี สูง 1,350 เมตร คั่วอ่อน กลิ่นลิ้นจี่" · "Grown at 1,350 m. Roasted light. Read the bag." Plain, specific, a little formal in Thai (ครับ/ค่ะ used sparingly), numbers over adjectives. Words used: ไร่, ระดับความสูง, คั่วอ่อน, farmer's name. Words avoided: "premium", "authentic", "artisan".
 
 ## Accessibility floor
 
@@ -110,6 +125,12 @@ Body text 4.5:1 minimum (the tokens' pairs prove it), smallest text 12 px in lab
 - Show the farmer's name and altitude on every product graphic.
 - Place the logo on a flat color field when the background is a photograph.
 - Use cherry red once per piece, for the single thing that matters.
+
+## Open questions
+
+| Node | Question | Why deferred | Default meanwhile |
+| --- | --- | --- | --- |
+| Dark mode in print | Is a dark-surface bag wanted? | the owner has not decided | light surfaces only |
 
 ## Decision log
 

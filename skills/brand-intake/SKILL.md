@@ -47,11 +47,11 @@ Write what you found as facts, separate from what should change. For each pillar
 - **Inconsistent**: name the contradiction (three different blues, four fonts) and where each appears.
 - **Missing**: nothing exists to observe.
 
-Compute, never guess: run `scripts/contrast.mjs` (in `design-craft`) on every text and background color pair found. Check the logo at 16 px and in one color. Compare the palette and marks with the category's competitors.
+Compute, never guess: run design-craft's `contrast.mjs` on every text and background color pair found. For each pillar marked Inconsistent, ask the human which version is canonical. Check the logo at 16 px and in one color. Compare the palette and marks with the category's competitors.
 
 ## 5. Write and read back
 
-Write the **Observed** content into the brand memory with every pillar's status (`observed`, `open`, or `deferred`), each taste-evidence item with the attribute the human gave, and a Decision log row for anything the human confirmed. Then read back, in plain words, what you memorized and what you found wrong, and ask for corrections.
+Write what you found into the matching sections of the brand memory, with every pillar's status (`observed`, `open`, or `deferred`), each taste-evidence item with the attribute the human gave, and a Decision log row for anything the human confirmed. Then read back, in plain words, what you memorized and what you found wrong, and ask for corrections. A pillar the human confirms as it is (including their pick of the canonical version for an inconsistent one) becomes `decided`. If they keep the whole identity, set Direction to `decided` with the note "existing identity".
 
 The intake is done when every file and link the human gave is cataloged or skipped with a stated reason, every pillar has a status with evidence, every contrast figure was computed, and the human confirmed the read-back.
 

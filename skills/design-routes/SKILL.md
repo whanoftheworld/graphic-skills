@@ -33,12 +33,14 @@ At least one route must honor the taste evidence closely, and at least one must 
 
 Build one self-contained page, `brand/explore/routes.html`, with fonts loaded from Google Fonts. Each route gets a panel showing: the name and idea, the wordmark set in the route's type and color, the swatches with hex and role, a type specimen with a Thai line and a Latin line, and a sample graphic (a 4:5 post built in CSS using the brand's real name and one real line of copy). Use only the brand's own content; invent no metrics or testimonials.
 
+When an image generator is available (on Codex, the `imagegen` skill; see `image-prompts.md` in design-craft), give each route one generated hero image made from the route's own style lines, so the human compares real imagery, not flat placeholders. Otherwise use a flat color field labeled with the photography direction.
+
 Then look at it. Open the page with a browser tool at 390 px and 1280 px wide and take a screenshot; confirm no horizontal scroll, no clipped Thai tone marks, and readable text. With no browser tool, tell the human to open the file and say what they see.
 
 ## 4. Present, recommend, choose
 
 Name your recommended route and the reason in two sentences, and the strongest argument against it. Ask the human to pick one, mix named elements from two, or reject all with the reason (a rejection is evidence for the next round).
 
-Record the choice in **Direction** with the rejected routes and why, update the Status table, and add a Decision log row. The skill is done when three routes passed the three-axis rule, the page was seen rendered, and the human chose or mixed one.
+Write the chosen route into **Direction** field by field (route and idea, personality position, type, color, logo approach, graphic language), naming the source route of each field in a mix, and list the rejected routes with the reason. Later commands read these fields from the brand memory, so the choice must live there and not only in `routes.html`. Set Direction to `decided` and add a Decision log row. The skill is done when three routes passed the three-axis rule, the page was seen rendered, and the human chose or mixed one.
 
 Then suggest `/type-system`, `/logo-lab`, and `/color-system`, in that order, each refining what the chosen route sketched.

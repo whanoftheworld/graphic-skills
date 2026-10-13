@@ -1,0 +1,5 @@
+interface:
+  display_name: "Brand Image"
+  short_description: "Generate on-brand imagery with the image generator, prompted from your brand"
+policy:
+  allow_implicit_invocation: false

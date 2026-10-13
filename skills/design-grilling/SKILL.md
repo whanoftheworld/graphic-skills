@@ -33,4 +33,4 @@ No design jargon without a one-line gloss. Reply in the user's language. "I don'
 
 ## Done
 
-The session is done when the frontier is empty: every branch is decided, deferred with a reason, or not applicable, and nothing was silently assumed. Write each round into the brand memory as it closes, not at the end. Read the summary back in plain words and get an explicit yes before acting on it.
+The session is done when the frontier is empty: every branch is decided, deferred with a reason, or not applicable, and nothing was silently assumed. Write each round as it closes, not at the end, into the file the calling skill names (the brand memory for brand work, the brief for a brief). Read the summary back in plain words and get an explicit yes before acting on it.

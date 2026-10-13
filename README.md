@@ -2,6 +2,8 @@
 
 Design skills for **Codex** and **Claude Code** that work the way a studio does: learn the brand first, interview you until it is clear, show real options, build a system, then make and critique every graphic against it. Thai-ready. [อ่านภาษาไทย](README.th.md)
 
+On Codex, the skills also drive the built-in image generator (`$imagegen`): they write the prompt from your brand memory, so generated pictures carry your palette, light, and guardrails.
+
 The shape follows [mattpocock/skills](https://github.com/mattpocock/skills): commands you type (`/grill-brand`), plus a few reference skills the agent loads by itself.
 
 ## Install
@@ -50,9 +52,9 @@ Everything the commands learn goes into one file, `brand/BRAND.md` (the **brand 
  you have an idea ──► /grill-brand ──┘     (3 routes,        (fonts,         (logo kit)   (palette,        (tokens, theme,
                                             pick one)         Thai too)                    contrast proof)   brand board, rules)
 
- every graphic after that:   /design-brief ─► /make-graphic ─► /design-critique ─┐
-                                   ▲                                              │ system-level findings
-                                   └──────────────────────────────────────────────┘ go back to the owning command
+ every graphic after that:   /design-brief ─► /brand-image ─► /make-graphic ─► /design-critique ─┐
+                                   ▲        (Codex image gen)                                │ system-level findings
+                                   └─────────────────────────────────────────────────────────┘ go back to the owning command
 ```
 
 The order follows what the best studios converge on: listen, define, explore a few real routes, build the system, apply, critique, loop. The sources, and what could not be verified, are in [docs/research.md](docs/research.md).
@@ -68,7 +70,10 @@ The order follows what the best studios converge on: listen, define, explore a f
 **#3: It looks fine, but it's unreadable, off-brand, or the Thai tone marks collide.**
 Numbers come from scripts, not from the model's eye: `contrast.mjs` proves every text pair against WCAG 2.2 and exits non-zero on failure, and `palette.mjs` builds tonal scales in OKLCH. Logos run a seven-test gauntlet (16 px favicon, one color, reversed, squint, small print, in place, name-swap). Thai has its own stacking test and a verified list of Thai fonts. `/design-critique` returns ranked findings with a location, evidence, and a fix.
 
-**#4: Every session starts from zero.**
+**#4: AI-generated images look generic or off-brand.**
+`/brand-image` writes the image prompt from your brand memory (palette hex values, light, the guardrails, the category clichés to avoid), calls Codex's built-in image generator, checks the result for garbled text, hands, palette drift, and honesty, and saves it into your project. `/make-graphic` then puts the exact logo and type on top, because generators cannot render Thai text or logos reliably.
+
+**#5: Every session starts from zero.**
 State lives in files: `BRAND.md`, `tokens.json`, `theme.css`, and a decision log that records what was rejected and why.
 
 ## Reference
@@ -86,7 +91,8 @@ State lives in files: `BRAND.md`, `tokens.json`, `theme.css`, and a decision log
 | [`/color-system`](skills/color-system/SKILL.md) | Chooses the palette with reasons, builds scales, proves every contrast pair. |
 | [`/brand-system`](skills/brand-system/SKILL.md) | Compiles tokens, a CSS theme, a brand board, and written guidelines. |
 | [`/design-brief`](skills/design-brief/SKILL.md) | Turns a request into a one-page brief: message, viewer, format, copy, success test. |
-| [`/make-graphic`](skills/make-graphic/SKILL.md) | Builds the graphic from tokens, renders it, gates it, exports it. |
+| [`/brand-image`](skills/brand-image/SKILL.md) | Prompts the image generator (Codex `imagegen`) from your brand memory, checks the result, saves it into the project. |
+| [`/make-graphic`](skills/make-graphic/SKILL.md) | Builds the graphic from tokens, places images, renders it, gates it, exports it. |
 | [`/design-critique`](skills/design-critique/SKILL.md) | Reviews a design against brand, craft, accessibility, and brief, with evidence. |
 
 **Model-invoked** (the agent loads them on its own; you can also type them)
@@ -94,7 +100,7 @@ State lives in files: `BRAND.md`, `tokens.json`, `theme.css`, and a decision log
 | Skill | What it holds |
 | --- | --- |
 | [`brand-context`](skills/brand-context/SKILL.md) | Loads the brand memory before any graphic work, and defines its format. |
-| [`design-craft`](skills/design-craft/SKILL.md) | Hierarchy, layout, typography, Thai typography, color, logo craft, graphic language, plus the contrast and palette scripts. |
+| [`design-craft`](skills/design-craft/SKILL.md) | Hierarchy, layout, typography, Thai typography, color, logo craft, graphic language, image prompting, plus the contrast and palette scripts. |
 | [`design-grilling`](skills/design-grilling/SKILL.md) | The interview method: rounds, recommended answers, show-don't-tell, evidence over adjectives. |
 
 ## What you get
@@ -115,6 +121,7 @@ The brand board it produces (full size: [brand-board.png](examples/morning-mist/
 
 - **Node 18+** for the scripts (`contrast.mjs`, `palette.mjs`, `build-theme.mjs`). No packages to install.
 - **Optional:** Python with `pip install fonttools uharfbuzz`, only for `logo-lab/scripts/text-to-svg.py`, which turns logo text into outlines with correct Thai shaping.
+- **An image generator** for `/brand-image`: on Codex, the built-in `image_gen` tool (the `imagegen` system skill, no API key needed). Without one, the skill hands you a paste-ready prompt instead.
 - **A browser tool** (Playwright, Chrome DevTools, or `npx playwright screenshot`) so the agent can look at what it renders. Without one, it asks you to open the file.
 - Network access for Google Fonts when previewing.
 

@@ -9,7 +9,7 @@
 //
 // Pairs live in tokens.json under $extensions["graphic-skills"].pairs:
 //   { "fg": "{color.text.primary}", "bg": "{color.surface.base}", "use": "body text", "need": "text", "mode": "light" }
-// need: "text" (4.5:1, default) | "large" (3:1, text >= 24px or >= 18.5px bold) | "ui" (3:1, icons, borders, focus rings)
+// need: "text" (4.5:1, default) | "large" (3:1, text >= 24px or >= 18.7px bold) | "ui" (3:1, icons, borders, focus rings)
 // mode: "light" (default) | "dark" (resolves through the tokens' "dark" group first)
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";

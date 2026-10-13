@@ -1,10 +1,12 @@
 # Color
 
+Rules marked *practice* are working conventions, not standards. The others cite a source.
+
 ## Roles, not swatches
 
 Name every color by its job: **brand primary** (the dominant color people remember), **secondary**, **accent** (rare, one purpose), **neutrals** (a tinted gray family for text, borders, surfaces), **semantic** (success, warning, danger, info), **surface** (background levels), **text** (primary, secondary, disabled). Start from a 60 / 30 / 10 split of dominant, supporting, accent, and adjust by eye.
 
-Most small brands need no more than four hues including the neutrals.
+Most small brands need no more than four hues including the neutrals (practice).
 
 ## Choosing the brand color
 
@@ -17,19 +19,19 @@ Choose a specific, ownable hue rather than the default of the category's templat
 
 ## Build the scale in OKLCH
 
-OKLCH keeps lightness perceptually even, so steps 50 to 950 behave predictably. Run `node scripts/palette.mjs "#base"` to get 11 steps and their contrast against white and black, then pin the exact brand hex to the step it sits nearest. Tint the neutrals toward the brand hue at low chroma so grays belong to the palette.
+OKLCH keeps lightness perceptually even, so steps 50 to 950 behave predictably. Run design-craft's `palette.mjs "#base"` to get 11 steps and their contrast against white and black, then pin the exact brand hex to the step it sits nearest. Tint the neutrals toward the brand hue at low chroma so grays belong to the palette.
 
 ## Contrast numbers (WCAG 2.2)
 
 Source: [Understanding SC 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
 
-- Normal text: **4.5:1**. Large text (18 pt, or 14 pt bold; about 24 px or 18.5 px bold): **3:1**.
+- Normal text: **4.5:1**. Large text (18 pt, or 14 pt bold; about 24 px, or 18.7 px bold): **3:1**.
 - Non-text parts that carry meaning (icons, input borders, focus rings, chart marks): **3:1** (SC 1.4.11).
 - Enhanced level: **7:1** for body text where a reader may struggle.
-- Ratios are thresholds: 4.499 fails. Check with `node scripts/contrast.mjs`, never by eye.
+- Ratios are thresholds: 4.499 fails. Check with design-craft's `contrast.mjs`, never by eye.
 - Logotypes are exempt from the rule, but a logo that cannot be read has failed its job; check it anyway.
 
-Declare each planned text/background pair in `tokens.json` under `$extensions["graphic-skills"].pairs` and run `node scripts/contrast.mjs --tokens brand/tokens.json`; it exits 1 when a pair fails.
+Declare each planned text/background pair in `tokens.json` under `$extensions["graphic-skills"].pairs` and run design-craft's `contrast.mjs --tokens brand/tokens.json`; it exits 1 when a pair fails.
 
 ## Beyond contrast
 

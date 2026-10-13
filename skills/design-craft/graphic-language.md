@@ -11,10 +11,11 @@ Take three things from the chosen route and the logo: a **shape language** (roun
 - Photography: subject, light (soft or hard, warm or cool), color grade (tied to the palette), crop (tight or airy), and composition (centered, off-axis). Name one real example per rule.
 - Illustration: line weight, palette limited to brand tokens, level of detail, how people are drawn.
 - Real beats stock: photograph the real product, place, and people when possible. Stock handshakes and generic skylines say nothing about this brand.
+- Generated imagery: when an image generator is available, distill these rules into an **Image recipe** (five to eight reusable prompt lines) and keep it in the brand memory; see [image-prompts.md](image-prompts.md).
 
 ## Icons
 
-Set one grid (24 px is the usual), one stroke weight (1.5 or 2 px), one cap and corner style, and one fill rule (outline or solid). Mixing sets breaks the brand faster than any color mistake.
+Set one grid (24 px is the usual choice, practice), one stroke weight (1.5 or 2 px), one cap and corner style, and one fill rule (outline or solid). Mixing sets breaks the brand faster than any color mistake.
 
 ## Patterns and shapes
 

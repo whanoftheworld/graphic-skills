@@ -38,7 +38,7 @@ Render every finalist, side by side, through all of these:
 
 ## The logo kit
 
-Deliver five SVG masters in `brand/assets/logo/`: `logo-primary.svg` (the preferred lockup, full color), `logo-alternate.svg` (the other lockup, horizontal or stacked), `logo-icon.svg` (avatars and favicons), `logo-black.svg`, and `logo-white.svg` (reversed). Set any text as **outlines**, so the file does not depend on an installed font (`logo-lab/scripts/text-to-svg.py`). Specify **clear space** in a unit taken from the mark itself (the height of a defined letter or shape), a **minimum size** in px and mm, and a **misuse** list: stretching, rotating, recoloring, adding effects, placing on busy backgrounds.
+Deliver five SVG masters in `brand/assets/logo/`: `logo-primary.svg` (the preferred lockup, full color), `logo-alternate.svg` (the other lockup, horizontal or stacked), `logo-icon.svg` (avatars and favicons), `logo-black.svg`, and `logo-white.svg` (reversed). A wordmark brand has no symbol, so its icon is a monogram taken from the wordmark (the first letter or a tight crop), and an alternate that would only repeat the primary is recorded as `n/a` with the reason. Set any text as **outlines**, so the file does not depend on an installed font (`logo-lab/scripts/text-to-svg.py`). Specify **clear space** in a unit taken from the mark itself (the height of a defined letter or shape), a **minimum size** in px and mm, and a **misuse** list: stretching, rotating, recoloring, adding effects, placing on busy backgrounds.
 
 ## Thai and mixed-script logos
 

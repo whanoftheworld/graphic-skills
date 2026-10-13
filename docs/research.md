@@ -41,6 +41,10 @@ Aaker's five brand personality dimensions (sincerity, excitement, competence, so
 - **Wolff Olins and Collins process pages**: the Wolff Olins article body could not be fetched; only the search summary above was available. No Collins process detail was found.
 - **How many options studios present**: sources disagree (Haviv's firm is known for presenting one idea; other studios present several). `/design-routes` presents three because a non-designer needs contrast to know what they like, and says which route it recommends.
 
+## Image generation on Codex
+
+Codex ships a system skill, `imagegen`, whose `SKILL.md` was read directly from an installed Codex (2026-10-13). Facts used: the default path is the built-in `image_gen` tool, needing no API key, with a CLI fallback that needs `OPENAI_API_KEY`; one call per asset or variant; generations are saved under `$CODEX_HOME/generated_images/` and must be copied into the project; prompts use a labeled spec (use case slug, asset type, primary request, style, composition, lighting, palette, verbatim text, constraints, avoid); and the skill itself excludes work better done in SVG, HTML, or CSS and logo systems that already exist as vector files. `/brand-image` and `design-craft/image-prompts.md` build on those rules and add the brand-memory mapping and the image gate. The Claude Code harness has no built-in image generator, so there the skills fall back to a paste-ready prompt.
+
 ## Why the skills are shaped this way
 
 - **A brand memory file** (`brand/BRAND.md`) carries every decision between commands and sessions, so no command depends on a long chat and any agent can pick up the work. It follows the "baton" idea of Matt Pocock's skills, where state lives in files.

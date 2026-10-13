@@ -38,7 +38,7 @@ Feel is not in the metadata, so judge it from the specimen. Known anchors: Kanit
 - **Emphasis**: use weight or color. Thai has no true italic tradition, and a synthesized slant distorts the stacked marks.
 - **Alignment**: left-align. Thai spaces separate phrases, not words (W3C), so justified text opens uneven gaps.
 - **Size**: start body copy at 16 px on screen. Thai glyphs look smaller than Latin at the same size, and 14 px is tight.
-- **Line breaks**: set `lang="th"` so browsers use dictionary-based breaking; never insert manual breaks mid-word. To control a headline, use a zero-width space (U+200B) at the break you want.
+- **Line breaks**: Thai has no spaces between words, so check how a headline wraps by rendering it; never insert a manual break mid-word. Set `lang="th"` on the document for font selection and accessibility. To control a headline, put a zero-width space (U+200B) at the break you want.
 - **Numerals**: Arabic digits (0 to 9) for modern brands; Thai digits (๑ ๒ ๓) for a traditional or official tone. Choose once.
 
 ## Mixed Thai and Latin

@@ -1,6 +1,6 @@
 ---
 name: design-craft
-description: Design fundamentals reference covering hierarchy, layout and grids, typography (Latin and Thai), color and contrast, logo craft, and imagery and graphic language. Use when making or judging any visual design decision, or when a graphic skill points here.
+description: Design fundamentals reference covering hierarchy, layout and grids, typography (Latin and Thai), color and contrast, logo craft, graphic language, and brand-aware image prompts. Use when making or judging any visual design decision, or when a graphic skill points here.
 ---
 
 # Design craft
@@ -24,10 +24,13 @@ Six laws sit under every file here. Each file adds the numbers and checks for it
 | Palette, tonal scales, contrast, dark mode, print color | [color.md](color.md) |
 | Logo concept, construction, testing, the logo kit | [logo.md](logo.md) |
 | Imagery, icons, patterns, motion, honest content | [graphic-language.md](graphic-language.md) |
+| Prompting an image generator from the brand (Codex `imagegen`), and checking the result | [image-prompts.md](image-prompts.md) |
 
 ## Scripts
 
-Run these from this skill's `scripts/` folder; they have no dependencies beyond Node.
+Run them from the project root with Node, giving the path to this skill's folder (the folder that holds this `SKILL.md`), written `<design-craft>` below. They have no other dependencies.
 
-- `node scripts/contrast.mjs "#fg" "#bg"` or `--tokens brand/tokens.json`: WCAG 2.2 ratio and pass/fail; exits 1 on a failing pair.
-- `node scripts/palette.mjs "#base"` or `"#base" --json <name>`: an 11-step OKLCH tonal scale with contrast against white and black.
+- `node <design-craft>/scripts/contrast.mjs "#fg" "#bg"` or `--tokens brand/tokens.json`: WCAG 2.2 ratio and pass/fail; exits 1 on a failing pair.
+- `node <design-craft>/scripts/palette.mjs "#base"` or `"#base" --json <name>`: an 11-step OKLCH tonal scale with contrast against white and black.
+
+Other skills name these as design-craft's `contrast.mjs` and `palette.mjs`; resolve them the same way.

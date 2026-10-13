@@ -1,10 +1,12 @@
 # Layout, hierarchy, and composition
 
+Numbers here are working conventions (*practice*), not standards: check them by looking.
+
 ## Read order
 
 Decide the three reads before placing anything: what the eye hits **first**, **second**, **third**. Build them with these levers, strongest first:
 
-- **Size**: jump at least 1.5× between levels. Smaller jumps read as a mistake, not a hierarchy.
+- **Size**: put levels at least two steps apart on the type scale (about 1.5× or more). Neighbouring steps read as a mistake, not a hierarchy.
 - **Contrast and color**: the first read gets the highest contrast on the surface, and the brand's accent belongs to it alone.
 - **Weight and position**: heavier and higher reads earlier; left-top is the default start in left-to-right scripts.
 - **Space**: isolation reads as importance. Surround the first read with more room than anything else.
@@ -15,7 +17,7 @@ Two levels of emphasis on one surface compete. A fourth level means the message 
 
 - Choose a column grid (4 for phone, 8 or 12 for wide) and hold its margins and gutters on every surface of the brand.
 - Spacing comes from one scale: 4, 8, 12, 16, 24, 32, 48, 64, 96 (a 4/8 base, a convention rather than a law). Name steps as tokens.
-- **Proximity**: the space between groups is at least twice the space within a group. This single rule fixes most amateur layouts.
+- **Proximity**: the space between groups is at least twice the space within a group (practice). This single rule fixes most amateur layouts.
 - **Alignment**: pick a few strong edges and hold them. Left-align body text; center only short, symmetrical statements of three lines or fewer.
 - **Margins**: keep content at least 5 to 8% of the short side away from the trim or canvas edge. Cramped margins read cheap faster than any other flaw.
 

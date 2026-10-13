@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Color is the fastest signal a brand sends and the easiest to get wrong without numbers. This skill chooses the palette with reasons, builds scales, and checks each pairing by script.
 
-Load the `brand-context`, `design-craft`, and `design-grilling` skills (the Skill tool, or read their SKILL.md), and read `color.md`. Reply in the user's language. The brand memory needs a chosen **Direction**; without one, tell the human to run `/design-routes`.
+Load the `brand-context`, `design-craft`, and `design-grilling` skills (the Skill tool, or read their SKILL.md), and read `color.md`. Reply in the user's language. The brand memory needs a `decided` **Direction** (a chosen route, or "existing identity" kept at intake); without one, tell the human to run `/design-routes`.
 
 ## 1. Gather the evidence
 
@@ -20,9 +20,9 @@ Propose, with a one-line reason each, the **brand primary**, **secondary**, **ac
 
 ## 3. Build and prove
 
-For each chosen color run `node palette.mjs "#hex" --json <name>` from `design-craft/scripts/`, and put the scales into `brand/tokens.json` with the exact brand hex pinned to its nearest step. Add semantic colors (success, warning, danger, info) tuned to sit beside the brand colors, and a **surface** and **text** family from the neutrals.
+For each chosen color run design-craft's `palette.mjs "#hex" --json <name>`, and put the scales into `brand/tokens.json` (see TOKENS.md in `brand-context`: create the file from the template when missing, merge when present), with the exact brand hex pinned to its nearest step. Add semantic colors (success, warning, danger, info) tuned to sit beside the brand colors, and a **surface** and **text** family from the neutrals.
 
-Declare every text-on-background pair the brand will use (body on base surface, on raised surface, on brand primary, accent on dark, each button state) under `$extensions["graphic-skills"].pairs`, with `need` set to `text`, `large`, or `ui`. Run `node contrast.mjs --tokens brand/tokens.json`. Adjust steps until every pair passes, and record the final ratios in the **Color** table.
+Declare every text-on-background pair the brand will use (body on base surface, on raised surface, on brand primary, accent on dark, each button state) under `$extensions["graphic-skills"].pairs`, with `need` set to `text`, `large`, or `ui`. Run design-craft's `contrast.mjs --tokens brand/tokens.json`. Adjust steps until every pair passes, and record the final ratios in the **Color** table.
 
 ## 4. Extend
 
@@ -30,4 +30,4 @@ Declare every text-on-background pair the brand will use (body on base surface, 
 - **Print**: give the nearest CMYK or Pantone for each brand color, marked approximate and needing a proof, and define the one-color version.
 - **Grayscale test**: view the palette desaturated and confirm hierarchy survives without hue.
 
-The skill is done when every role has a hex and a scale in the tokens, every declared pair passes its required ratio (or has a named exception the human accepted), the human chose from the rendered palette page, and the **Color** section and Decision log are written, including the alternatives rejected.
+The skill is done when every role has a hex and a scale in the tokens, every declared pair passes its required ratio (or has a named exception the human accepted), the human chose from the rendered palette page, and the **Color** section and Decision log are written, including the alternatives rejected. Set Color to `decided`.

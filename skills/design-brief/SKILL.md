@@ -20,11 +20,12 @@ Run `design-grilling` over this tree. Skip any node the request already answers,
 - **Copy**: which words are supplied, which you write, and in which languages. Mark every claim, price, date, and number as supplied by the human or as a placeholder.
 - **Required elements**: logo version, legal lines, contact, price, a call to action.
 - **Brand levers**: which parts of the brand carry this piece (the color block, the photography, the display type), taken from the brand memory.
+- **Imagery**: supplied photographs, a generated image (Codex's `imagegen`, through `/brand-image`), or code-only shapes and type.
 - **Success test**: how the human will judge it, stated in terms a check can answer (readable at 200 px wide, the offer is the first read, the logo has clear space).
 - **Constraints and variants**: print specs and bleed, deadline, the sizes to adapt it to.
 
 ## Write
 
-Save `brand/briefs/<yyyy-mm-dd>-<slug>.md` with those nine headings, the human's words quoted where they chose them, and the success test as a checklist. Read it back in plain words and get an explicit yes.
+The interview writes to the brief and never to the brand memory. Save `brand/briefs/<yyyy-mm-dd>-<slug>.md` with one heading per node above (Message, Viewer and moment, Format, Copy, Required elements, Brand levers, Imagery, Success test, Constraints and variants), the human's words quoted where they chose them, and the success test as a checklist. Read it back in plain words and get an explicit yes.
 
 The brief is done when the message fits one sentence, the canvas size is fixed, every number or claim in the copy has a named source, and the success test is checkable. Then tell the human to run `/make-graphic` on it.

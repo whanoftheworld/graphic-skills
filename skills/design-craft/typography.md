@@ -4,7 +4,7 @@ For Thai or mixed Thai/Latin work, read [thai-typography.md](thai-typography.md)
 
 ## Roles
 
-Name the roles before choosing fonts: **display**, **heading**, **body**, **caption**, **UI**, **numerals**. One family in several weights often serves every role. Two families is the ceiling for most brands, plus a mono only when the content is code or data.
+Name the roles before choosing fonts: **display**, **heading**, **body**, **caption**, **UI**, **numerals**. One family in several weights often serves every role. Two families is the ceiling for most brands (practice), plus a mono only when the content is code or data.
 
 ## Numbers that hold
 
@@ -18,7 +18,7 @@ From Matthew Butterick's [summary of key rules](https://practicaltypography.com/
 
 ## Scale
 
-Pick one ratio and derive every size from `base × ratio^n`: 1.125 for dense UI, 1.2 or 1.25 for most brands (1.25, the major third, is the default), 1.333 for editorial, 1.5 and up only for posters. Round to whole pixels, name the steps as tokens, use `clamp()` for fluid web sizes.
+Pick one ratio and derive every size from `base × ratio^n`: 1.125 for dense UI, 1.2 or 1.25 for most brands (1.25, the major third, is the default), 1.333 for editorial, 1.5 and up only for posters. Round rem values to three decimals, name the steps as tokens, use `clamp()` for fluid web sizes.
 
 ## Pairing
 
@@ -48,4 +48,4 @@ State the result as "closest matches", each with a confidence, and prefer open-l
 
 - **OFL** families on Google Fonts are free for commercial use, print and web. For any other font, find the licence, including web embedding rights, before it enters the brand memory.
 - Record family, source URL, and licence for every font in the brand memory.
-- Web: `font-display: swap`, at most three weights per family, subset where possible, a full fallback stack, `lang` set on the document.
+- Web: `font-display: swap`, at most three weights per family (practice, for load speed), subset where possible, a full fallback stack, `lang` set on the document.

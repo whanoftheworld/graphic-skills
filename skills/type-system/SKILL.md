@@ -8,11 +8,11 @@ disable-model-invocation: true
 
 Fonts are the brand's voice. This skill turns the fonts a human likes, and the constraints they live under, into a chosen pairing and a complete system of roles, sizes, and rules.
 
-Load the `brand-context`, `design-craft`, and `design-grilling` skills (the Skill tool, or read their SKILL.md). Read `typography.md`, and `thai-typography.md` whenever the brand uses Thai. Reply in the user's language.
+Load the `brand-context`, `design-craft`, and `design-grilling` skills (the Skill tool, or read their SKILL.md). Read `typography.md`, and `thai-typography.md` whenever the brand uses Thai. Reply in the user's language. The brand memory needs a `decided` **Direction** (a chosen route, or "existing identity" kept at intake); without one, tell the human to run `/design-routes`.
 
 ## 1. Read the type DNA
 
-From the brand memory take the chosen route, personality, and every font in Taste evidence. For each liked or disliked font (a name, a file, or a screenshot), write its anatomy by the checklist in `typography.md` and name the attribute the human gave. Summarize the **type DNA**: the class, contrast, proportions, and mood that the liked fonts share and the disliked ones lack. Ask for more references if fewer than three exist.
+From the brand memory take the chosen route, personality, and every font in Taste evidence. For each liked or disliked font (a name, a file, or a screenshot), write its anatomy by the checklist in `typography.md` and name the attribute the human gave. Summarize the **type DNA**: the class, contrast, proportions, and mood that the liked fonts share and the disliked ones lack. If fewer than three references exist, run a visible probe: show six specimens across classes set with the brand's own name, ask for a like or dislike on each with the attribute, and record the reactions as Taste evidence.
 
 ## 2. Fix the constraints
 
@@ -31,12 +31,12 @@ Thai stacking: ป้ายผู้ใหญ่ ฝั่งฟื้น กร
 
 ## 4. Choose and specify
 
-When the human picks, define the system and write it into **Typography** and, where tokens exist, into `tokens.json`:
+When the human picks, define the system and write it into **Typography** and into `brand/tokens.json` (see TOKENS.md in `brand-context`: create the file from the template when missing, merge when present):
 
 - **Roles**: display, heading, body, caption, UI, numerals, each with family, weight, and case.
 - **Scale**: one ratio (default 1.25) and the size ladder derived from it, in px or rem.
-- **Line height per script**: Latin at 1.2 to 1.5 by size, Thai at 1.5 to 1.8 for body and 1.3 or more for headings once the stacking test passed. Letter-spacing 0 for Thai.
+- **Line height per script**: Latin 1.2 to 1.45 for body and tighter for large display, Thai 1.5 to 1.8 for body and 1.3 or more for headings once the stacking test passed. Letter-spacing 0 for Thai.
 - **Fallback stack** with Latin first and Thai second where scripts mix, and the Google Fonts URL with only the weights used.
 - **Source and licence** of every family, with the URL.
 
-The skill is done when each family has a verified licence and source, the scale and line heights are written, the stacking test passed in the rendered specimen, and the human confirmed the pairing. Log the choice and the rejected pairings in the Decision log.
+The skill is done when each family has a verified licence and source, the scale and line heights are written, the stacking test passed in the rendered specimen, and the human confirmed the pairing. Log the choice and the rejected pairings in the Decision log, and set Typography to `decided`.
