@@ -1,0 +1,5 @@
+interface:
+  display_name: "Brand Intake"
+  short_description: "Hand over your existing brand; the agent memorizes and audits it"
+policy:
+  allow_implicit_invocation: false

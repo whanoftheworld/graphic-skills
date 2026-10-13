@@ -1,0 +1,20 @@
+{
+  "name": "whanoftheworld",
+  "interface": {
+    "displayName": "whanoftheworld skills"
+  },
+  "plugins": [
+    {
+      "name": "graphic-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Design Critique"
+  short_description: "Review a design against brand, craft, and brief, with evidence"
+policy:
+  allow_implicit_invocation: false

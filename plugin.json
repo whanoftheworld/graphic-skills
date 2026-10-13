@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "graphic-skills",
+  "version": "0.1.0",
+  "description": "Graphic design skills for Codex and Claude Code: memorize a brand, interview a new one into existence, explore routes, build type, logo, and color systems with Thai support, then brief, make, and critique graphics.",
+  "author": {
+    "name": "whanoftheworld",
+    "url": "https://github.com/whanoftheworld"
+  },
+  "homepage": "https://github.com/whanoftheworld/graphic-skills",
+  "repository": "https://github.com/whanoftheworld/graphic-skills",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "branding",
+    "brand-identity",
+    "graphic-design",
+    "logo",
+    "typography",
+    "color",
+    "thai",
+    "design-tokens",
+    "skills"
+  ]
+}

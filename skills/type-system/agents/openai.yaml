@@ -1,0 +1,5 @@
+interface:
+  display_name: "Type System"
+  short_description: "Choose fonts from evidence and define the full type system"
+policy:
+  allow_implicit_invocation: false

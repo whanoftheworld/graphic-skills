@@ -1,0 +1,5 @@
+interface:
+  display_name: "Color System"
+  short_description: "Choose a palette with reasons and prove every contrast pair"
+policy:
+  allow_implicit_invocation: false

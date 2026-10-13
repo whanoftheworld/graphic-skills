@@ -1,0 +1,218 @@
+<!doctype html>
+<!--
+  Brand board template and worked example. Sample brand: Morning Mist Roasters (fictional).
+  Replace every piece of content; keep the structure and style only through tokens (var(--...)).
+  Before finishing, search this file for "Morning Mist", "ไร่หมอกเช้า", and the hex values below: none may remain.
+-->
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Mist Roasters: brand board</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { overflow-x: clip; }
+  body { margin: 0; background: var(--color-surface-base); color: var(--color-text-primary); font-family: var(--font-body); font-size: var(--size-body); line-height: var(--leading-body); }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: var(--font-weight-semibold); line-height: var(--leading-heading); margin: 0; overflow-wrap: anywhere; }
+  p { margin: 0 0 var(--space-s); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--space-m); }
+  section { padding: var(--space-2xl) 0; border-top: 1px solid var(--color-border-subtle); }
+  .label { font-size: var(--size-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--color-primary); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-2xs); }
+  .muted { color: var(--color-text-secondary); }
+  .grid { display: grid; gap: var(--space-m); }
+  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 800px) { .g2, .g3, .g4 { grid-template-columns: minmax(0, 1fr); } section { padding: var(--space-xl) 0; } }
+  .card { background: var(--color-surface-sunken); border-radius: var(--radius-md); padding: var(--space-m); }
+  .card.brand { background: var(--color-surface-brand); color: var(--color-text-onBrand); }
+  .stage { display: flex; align-items: center; justify-content: center; min-height: 160px; border-radius: var(--radius-md); padding: var(--space-m); }
+
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: var(--space-m); padding-top: var(--space-l); padding-bottom: var(--space-l); flex-wrap: wrap; }
+  .idea { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--size-h2); line-height: var(--leading-heading); max-width: 24ch; margin-bottom: var(--space-m); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin-bottom: var(--space-m); }
+  .chip { border: 1px solid var(--color-border-strong); border-radius: var(--radius-pill); padding: var(--space-3xs) var(--space-xs); font-size: var(--size-caption); }
+
+  .clear { display: inline-block; padding: 26px; outline: 1px dashed var(--color-secondary); outline-offset: -1px; }
+  .swatch { border-radius: var(--radius-md); padding: var(--space-m); min-height: 150px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .swatch b { font-weight: var(--font-weight-semibold); }
+  .swatch small { font-size: var(--size-caption); }
+  .scale { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); border-radius: var(--radius-md); overflow: hidden; margin-top: var(--space-m); }
+  .scale span { height: 56px; }
+  .scale-names { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); font-size: var(--size-caption); color: var(--color-text-secondary); margin-top: var(--space-3xs); }
+  .scale-names span { text-align: center; }
+
+  .ladder > div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-m); border-bottom: 1px solid var(--color-border-subtle); padding: var(--space-2xs) 0; }
+  .ladder em { font-style: normal; font-size: var(--size-caption); color: var(--color-text-secondary); white-space: nowrap; font-family: var(--font-body); }
+  .ladder .d { font-family: var(--font-display); font-weight: var(--font-weight-semibold); line-height: var(--leading-heading); }
+
+  .specimen dl { margin: 0; }
+  .specimen dl > div { display: grid; grid-template-columns: 9ch 1fr; gap: var(--space-s); padding: var(--space-2xs) 0; border-top: 1px solid var(--color-border-strong); }
+  .specimen dt { font-size: var(--size-caption); color: var(--color-text-secondary); font-weight: var(--font-weight-semibold); }
+  .specimen dd { margin: 0; }
+  .mist { height: 72px; border-radius: var(--radius-md); background: repeating-linear-gradient(to bottom, var(--color-brand-700) 0 22px, transparent 22px 30px, var(--color-brand-700) 30px 40px, transparent 40px 49px, var(--color-brand-700) 49px 55px, transparent 55px 72px); }
+  .photo { aspect-ratio: 4 / 3; border-radius: var(--radius-md); background: var(--color-brand-900); color: var(--color-text-onBrand); display: flex; align-items: flex-end; padding: var(--space-s); font-size: var(--size-caption); }
+
+  .space { display: flex; align-items: flex-end; gap: var(--space-2xs); flex-wrap: wrap; }
+  .space i { display: block; background: var(--color-brand-700); }
+  .space figure { margin: 0; text-align: center; font-size: var(--size-caption); color: var(--color-text-secondary); }
+
+  .do, .dont { border-radius: var(--radius-md); padding: var(--space-m); }
+  .do { border: 2px solid var(--color-semantic-success); }
+  .dont { border: 2px solid var(--color-semantic-danger); }
+  .do h3, .dont h3 { font-size: var(--size-lead); margin-bottom: var(--space-2xs); }
+  footer { padding: var(--space-xl) 0; border-top: 1px solid var(--color-border-subtle); font-size: var(--size-caption); color: var(--color-text-secondary); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="assets/logo/logo-primary.svg" alt="Morning Mist Roasters ไร่หมอกเช้า" height="72" style="height:72px;width:auto">
+    <div class="label" style="margin:0">Brand board · v1 · 2026-10-13</div>
+  </div>
+</header>
+
+<section id="idea">
+  <div class="wrap">
+    <div class="label">The idea</div>
+    <p class="idea">We are the only roaster in Chiang Mai that prints the farmer's name and the altitude on every bag.</p>
+    <div class="chips"><span class="chip">warm but never rustic-kitsch</span><span class="chip">precise but never clinical</span><span class="chip">local but never touristy</span></div>
+    <p class="muted" style="max-width:62ch">For Pim, 29, a freelance illustrator who brews pour-over at home, orders on LINE OA and Instagram, and reads the bag before she reads the price. Route: <b>Field Notes</b>. The bag reads like a labelled specimen from a real farm.</p>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="label">Logo</div>
+    <h2 style="margin-bottom:var(--space-m)">A sun rising behind the mist</h2>
+    <div class="grid g2">
+      <div class="stage card"><img src="assets/logo/logo-primary.svg" alt="Primary logo" style="height:88px;width:auto"></div>
+      <div class="stage card brand"><img src="assets/logo/logo-white.svg" alt="Reversed logo" style="height:88px;width:auto"></div>
+      <div class="stage card"><img src="assets/logo/logo-alternate.svg" alt="Alternate stacked logo" style="height:150px;width:auto"></div>
+      <div class="stage card" style="gap:var(--space-m);flex-wrap:wrap">
+        <img src="assets/logo/logo-icon.svg" alt="" width="16" height="16"><img src="assets/logo/logo-icon.svg" alt="" width="32" height="32"><img src="assets/logo/logo-icon.svg" alt="" width="64" height="64"><img src="assets/logo/logo-icon.svg" alt="Icon in a circular avatar" width="88" height="88" style="border-radius:50%;background:var(--color-surface-base);padding:6px;border:1px solid var(--color-border-subtle)">
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:var(--space-l);align-items:start">
+      <div><div class="clear"><img src="assets/logo/logo-primary.svg" alt="" style="height:72px;width:auto"></div>
+        <p class="muted" style="margin-top:var(--space-2xs);font-size:var(--size-caption)">Clear space on every side = the height of the capital M.</p></div>
+      <div>
+        <p><b>Minimum size.</b> Icon 16 px / 5 mm. Primary lockup 120 px / 25 mm wide.</p>
+        <p><b>Kit.</b> primary, alternate, icon, black, white; text is outlined, so no font is needed.</p>
+        <p><b>Never.</b> stretch, recolor, add effects, or sit the logo on photography without a flat color field.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="color">
+  <div class="wrap">
+    <div class="label">Color</div>
+    <h2 style="margin-bottom:var(--space-m)">Green on cream, one red</h2>
+    <div class="grid g4">
+      <div class="swatch" style="background:var(--color-brand-700);color:var(--color-text-onBrand)"><b>Forest green</b><small>#2f6b4f · primary<br>5.87:1 with cream</small></div>
+      <div class="swatch" style="background:var(--color-accent-600);color:var(--color-text-onAccent)"><b>Coffee-cherry red</b><small>#b3342a · accent, once per piece<br>5.69:1 with cream</small></div>
+      <div class="swatch" style="background:var(--color-neutral-50);border:1px solid var(--color-border-subtle)"><b>Warm cream</b><small>#f9f7f0 · page<br>16.20:1 with ink</small></div>
+      <div class="swatch" style="background:var(--color-neutral-950);color:var(--color-neutral-50)"><b>Ink</b><small>#1d1a13 · text, dark mode page<br>16.20:1 with cream</small></div>
+    </div>
+    <div class="scale" role="img" aria-label="Brand green scale from 50 to 950">
+      <span style="background:var(--color-brand-50)"></span><span style="background:var(--color-brand-100)"></span><span style="background:var(--color-brand-200)"></span><span style="background:var(--color-brand-300)"></span><span style="background:var(--color-brand-400)"></span><span style="background:var(--color-brand-500)"></span><span style="background:var(--color-brand-600)"></span><span style="background:var(--color-brand-700)"></span><span style="background:var(--color-brand-800)"></span><span style="background:var(--color-brand-900)"></span><span style="background:var(--color-brand-950)"></span>
+    </div>
+    <div class="scale-names"><span>50</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span><span>800</span><span>900</span><span>950</span></div>
+    <p class="muted" style="margin-top:var(--space-m);max-width:70ch">About 60% cream, 30% green and ink, 10% red. All 17 text and border pairs in <code>tokens.json</code> pass WCAG 2.2 (body text on page is 16.2:1). Print values are approximate; proof before print.</p>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="label">Typography</div>
+    <h2 style="margin-bottom:var(--space-m)">Looped Thai, from display to caption</h2>
+    <div class="grid g2" style="align-items:start">
+      <div class="ladder">
+        <div><span class="d" style="font-size:var(--size-display)">ไร่หมอกเช้า</span><em>display 61 px</em></div>
+        <div><span class="d" style="font-size:var(--size-h1)">Morning Mist</span><em>h1 49 px</em></div>
+        <div><span class="d" style="font-size:var(--size-h2)">ก้าวแรกของวัน</span><em>h2 39 px</em></div>
+        <div><span class="d" style="font-size:var(--size-h3)">Grown at 1,350 m</span><em>h3 31 px</em></div>
+        <div><span style="font-size:var(--size-lead)">คั่วอ่อน กลิ่นลิ้นจี่ หวานชื่น</span><em>lead 20 px</em></div>
+        <div><span>อ่านถุงก่อนอ่านราคา Read the bag before the price.</span><em>body 16 px · 1.7</em></div>
+        <div><span style="font-size:var(--size-caption)">ระดับความสูง · ALTITUDE · LOT 07</span><em>caption 12.8 px</em></div>
+      </div>
+      <div class="card">
+        <p class="label">Display and heading</p>
+        <p style="font-family:var(--font-display);font-weight:var(--font-weight-semibold);font-size:var(--size-h3);line-height:var(--leading-heading)">Pridi 600. Warm, serif, looped.</p>
+        <p class="label" style="margin-top:var(--space-m)">Body, UI, numerals</p>
+        <p>IBM Plex Sans Thai Looped 400 / 500 / 600. Arabic digits: 0123456789.</p>
+        <p class="label" style="margin-top:var(--space-m)">Stacking test</p>
+        <p style="font-size:var(--size-lead)">ป้ายผู้ใหญ่ ฝั่งฟื้น กรุ๊ปปั๊ม ญุฐู ที่นี่ ๑๒๓ 123</p>
+        <p class="muted" style="font-size:var(--size-caption)">Scale 1.25 from 16 px. Line height: body 1.7, headings 1.3. Thai letter-spacing 0; no Thai italics. Both families are OFL, from Google Fonts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="language">
+  <div class="wrap">
+    <div class="label">Graphic language</div>
+    <h2 style="margin-bottom:var(--space-m)">Three motifs, no more</h2>
+    <div class="grid g3">
+      <div class="specimen card">
+        <h3 style="font-size:var(--size-h4);margin-bottom:var(--space-xs)">1. Specimen label</h3>
+        <dl>
+          <div><dt>FARMER</dt><dd>ไร่คุณสมศรี</dd></div>
+          <div><dt>ALTITUDE</dt><dd>1,350 m</dd></div>
+          <div><dt>PROCESS</dt><dd>Washed · light roast</dd></div>
+        </dl>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--size-h4);margin-bottom:var(--space-xs)">2. Mist bands</h3>
+        <div class="mist" role="img" aria-label="Horizontal green bands that thin toward the bottom"></div>
+        <p class="muted" style="font-size:var(--size-caption);margin-top:var(--space-xs)">Taken from the icon. Dividers and image masks, never over text.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--size-h4);margin-bottom:var(--space-xs)">3. Real farm light</h3>
+        <div class="photo">Photo direction: soft morning light, cool shadows, the farmer in frame, tight crop.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="wrap">
+    <div class="label">Layout</div>
+    <h2 style="margin-bottom:var(--space-m)">One focal point, a steady scale</h2>
+    <div class="space" aria-label="Spacing scale">
+      <figure><i style="width:4px;height:4px"></i>4</figure><figure><i style="width:8px;height:8px"></i>8</figure><figure><i style="width:12px;height:12px"></i>12</figure><figure><i style="width:16px;height:16px"></i>16</figure><figure><i style="width:24px;height:24px"></i>24</figure><figure><i style="width:32px;height:32px"></i>32</figure><figure><i style="width:48px;height:48px"></i>48</figure><figure><i style="width:64px;height:64px"></i>64</figure><figure><i style="width:96px;height:96px"></i>96</figure>
+    </div>
+    <p class="muted" style="margin-top:var(--space-m);max-width:70ch">4 columns on phone and 12 on wide screens, 24 px margins on phone. Space between groups is at least twice the space within a group. The label block is the second read after the name or the photograph.</p>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="label">Voice</div>
+    <h2 style="margin-bottom:var(--space-m)">Specific, plain, a little formal</h2>
+    <div class="grid g2">
+      <div class="card"><p style="font-family:var(--font-display);font-size:var(--size-h4);line-height:var(--leading-heading);margin:0">ถั่วจากไร่คุณสมศรี สูง 1,350 เมตร คั่วอ่อน กลิ่นลิ้นจี่</p></div>
+      <div class="card"><p style="font-family:var(--font-display);font-size:var(--size-h4);line-height:var(--leading-heading);margin:0">Grown at 1,350 m. Roasted light. Read the bag.</p></div>
+    </div>
+    <p class="muted" style="margin-top:var(--space-m)">Use: farm, altitude, light roast, the farmer's name. Avoid: premium, authentic, artisan.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="label">Do and don't</div>
+    <div class="grid g2" style="margin-top:var(--space-m)">
+      <div class="do"><h3>Do</h3><p>Show the farmer's name and altitude on every product graphic. Put the logo on a flat color field over photography. Use the cherry red once per piece, for the one thing that matters.</p><img src="assets/logo/logo-primary.svg" alt="" style="height:48px;width:auto"></div>
+      <div class="dont"><h3>Don't</h3><p>Stretch or recolor the logo. Add a mascot, a bean icon, or kraft-paper texture. Set Thai with letter-spacing or italics.</p><img src="assets/logo/logo-primary.svg" alt="" style="height:48px;width:200px;object-fit:fill;outline:1px dashed var(--color-semantic-danger)"></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Morning Mist Roasters is a fictional example brand made with graphic-skills. Generated from <code>tokens.json</code> and <code>theme.css</code>.</div></footer>
+
+</body>
+</html>

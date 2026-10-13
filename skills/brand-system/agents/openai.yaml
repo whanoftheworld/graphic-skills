@@ -1,0 +1,5 @@
+interface:
+  display_name: "Brand System"
+  short_description: "Compile tokens, a CSS theme, a brand board, and guidelines"
+policy:
+  allow_implicit_invocation: false

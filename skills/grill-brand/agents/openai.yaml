@@ -1,0 +1,5 @@
+interface:
+  display_name: "Grill Brand"
+  short_description: "A relentless interview that shapes your brand, a round at a time"
+policy:
+  allow_implicit_invocation: false

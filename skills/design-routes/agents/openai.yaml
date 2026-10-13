@@ -1,0 +1,5 @@
+interface:
+  display_name: "Design Routes"
+  short_description: "Three genuinely different visual directions, side by side"
+policy:
+  allow_implicit_invocation: false

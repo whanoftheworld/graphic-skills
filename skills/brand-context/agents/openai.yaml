@@ -1,0 +1,3 @@
+interface:
+  display_name: "Brand Context"
+  short_description: "Load the brand memory before any graphic work"

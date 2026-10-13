@@ -1,0 +1,5 @@
+interface:
+  display_name: "Design Brief"
+  short_description: "Turn a request into a one-page graphic brief"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Make Graphic"
+  short_description: "Build, render, check, and export a graphic from brand tokens"
+policy:
+  allow_implicit_invocation: false

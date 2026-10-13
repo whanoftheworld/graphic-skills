@@ -1,0 +1,5 @@
+interface:
+  display_name: "Logo Lab"
+  short_description: "Concepts, thumbnails, a test gauntlet, and a logo kit"
+policy:
+  allow_implicit_invocation: false

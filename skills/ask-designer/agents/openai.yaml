@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Designer"
+  short_description: "Find the right graphic command for your situation"
+policy:
+  allow_implicit_invocation: false

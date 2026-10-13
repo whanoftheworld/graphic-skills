@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Lot 07, Instagram feed 1080 x 1350</title>
+<link rel="stylesheet" href="../../theme.css">
+<style>
+  /* Designed at 540 x 675 with brand tokens; zoom 2 exports it at 1080 x 1350. */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--color-surface-base); }
+  .canvas { zoom: 2; width: 540px; height: 675px; padding: var(--space-l); display: flex; flex-direction: column; gap: var(--space-m); position: relative; overflow: hidden; background: var(--color-surface-base); color: var(--color-text-primary); font-family: var(--font-body); line-height: var(--leading-body); }
+  header { display: flex; justify-content: space-between; align-items: center; }
+  header img { height: 36px; width: auto; }
+  .lot { font-size: var(--size-caption); letter-spacing: .08em; font-weight: var(--font-weight-semibold); color: var(--color-secondary); }
+  .panel { position: relative; background: var(--color-surface-brand); color: var(--color-text-onBrand); border-radius: var(--radius-md); padding: var(--space-m); height: 292px; overflow: hidden; }
+  .panel .kicker { font-size: var(--size-caption); font-weight: var(--font-weight-semibold); }
+  .panel .kicker .caps { letter-spacing: .08em; }
+  .panel h1 { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--size-display); line-height: var(--leading-heading); margin: var(--space-2xs) 0; }
+  .panel p { font-size: var(--size-lead); margin: 0; max-width: 16ch; position: relative; }
+  .sun { position: absolute; right: -44px; bottom: -56px; width: 250px; height: 250px; background: var(--color-brand-600); -webkit-mask: url(../../assets/logo/logo-icon.svg) center / contain no-repeat; mask: url(../../assets/logo/logo-icon.svg) center / contain no-repeat; }
+  dl { margin: 0; }
+  dl > div { display: grid; grid-template-columns: 11ch 1fr; gap: var(--space-s); padding: var(--space-2xs) 0; border-top: 1px solid var(--color-border-strong); }
+  dt { font-size: var(--size-caption); font-weight: var(--font-weight-semibold); color: var(--color-text-secondary); letter-spacing: .08em; align-self: center; }
+  dd { margin: 0; font-weight: var(--font-weight-medium); }
+  .cta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: var(--space-s); }
+  .btn { background: var(--color-primary); color: var(--color-text-onBrand); border-radius: var(--radius-pill); padding: var(--space-2xs) var(--space-m); font-weight: var(--font-weight-semibold); }
+  .note { font-size: var(--size-caption); color: var(--color-text-secondary); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <header>
+    <img src="../../assets/logo/logo-primary.svg" alt="Morning Mist Roasters ไร่หมอกเช้า">
+    <span class="lot">LOT 07</span>
+  </header>
+
+  <div class="panel">
+    <div class="kicker"><span class="caps">SINGLE ORIGIN</span> · ล็อตใหม่</div>
+    <h1>ไร่คุณสมศรี</h1>
+    <p>คั่วอ่อน กลิ่นลิ้นจี่</p>
+    <div class="sun" role="presentation"></div>
+  </div>
+
+  <dl>
+    <div><dt>FARMER</dt><dd>คุณสมศรี</dd></div>
+    <div><dt>ALTITUDE</dt><dd>1,350 m</dd></div>
+    <div><dt>PROCESS</dt><dd>Washed</dd></div>
+    <div><dt>ROAST</dt><dd>Light · คั่วอ่อน</dd></div>
+  </dl>
+
+  <div class="cta">
+    <span class="btn">สั่งผ่าน LINE OA</span>
+    <span class="note">Example content, fictional brand</span>
+  </div>
+</div>
+</body>
+</html>
